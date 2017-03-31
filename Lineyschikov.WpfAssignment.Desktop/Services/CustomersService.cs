@@ -20,8 +20,7 @@ namespace Lineyschikov.WpfAssignment.Desktop.Services
 
         public Task<List<Customer>> GetAll()
         {
-            //return _dbContext.Customers.Include(c => c.Orders).ToListAsync();
-            return Task.Run(() => new List<Customer>());
+            return _dbContext.Customers.Include(c => c.Orders).ToListAsync();
         }
 
         public Task Create(Customer customer)
